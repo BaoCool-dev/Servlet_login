@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
+@WebServlet("/logout")
 
 public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -20,7 +21,7 @@ public class Logout extends HttpServlet {
 	           session.invalidate(); 
 	       }
 
-	       resp.sendRedirect("Login.html");
+	       resp.sendRedirect("Login_session.html");
 
 	}
 }

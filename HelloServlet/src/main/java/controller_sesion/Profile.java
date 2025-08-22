@@ -10,9 +10,7 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/**
- * Servlet implementation class Profile
- */
+@WebServlet("/profile")
 public class Profile extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -29,7 +27,7 @@ public class Profile extends HttpServlet {
            out.println("<a href='logout'>Đăng xuất</a>");
        } else {
            out.println("<h3>Xin vui lòng đăng nhập</h3>");
-           resp.sendRedirect("Login.html");
+           resp.sendRedirect("Login_session.html");
        }
 	}
 

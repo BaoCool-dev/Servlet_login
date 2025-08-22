@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 /**
  * Servlet implementation class LoginServlet_2
  */
-@WebServlet("/login")
+@WebServlet("/loginsession")
 public class LoginServlet_2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -37,7 +37,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
            resp.sendRedirect("profile");
        } else {
            out.println("<h3>Tài khoản hoặc mật khẩu không chính xác!</h3>");
-           req.getRequestDispatcher("Login.html").include(req, resp);
+           req.getRequestDispatcher("Login_session.html").include(req, resp);
        }
 }
 
